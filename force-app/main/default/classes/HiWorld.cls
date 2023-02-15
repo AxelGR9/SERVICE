@@ -6,5 +6,7 @@
  * @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
 **/
 public with sharing class HiWorld {
-    public HiWorld() {}
+    public HiWorld() {
+        return true;
+    }
 }
