@@ -10,4 +10,4 @@ jobs:
       - run: npm install sfdx-cli -g
       - run: echo "${{ secrets.SFDX_JWT_KEY }}" > server.key
       - run: sfdx force:auth:jwt:grant --clientid=${{ secrets.SFDX_CLIENT_ID }} --jwtkeyfile=server.key --username=${{ secrets.SFDX_USERNAME }} --setdefaultdevhubusername
-      - run: sfdx force:source:deploy --manifest=manifest/package.xml 
+      - run: sfdx force:source:deploy --manifest=manifest/package.xml  -u ${{ secrets.SFDX_USERNAME }}
